@@ -6,7 +6,14 @@
   color: black;
 }
 
+@mixin font-setting($size, $weight, $color){
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
 article{
+  @include font-setting(1.0em, normal, black);
   h1{
     font-size: 1.2em;
   }
@@ -18,6 +25,10 @@ article{
   +div{
     margin: 20px;
   }
+}
+
+footer {
+  @include font-setting(0.8em, bolder, gray);
 }
 
 .inverse{

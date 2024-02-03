@@ -137,47 +137,37 @@ body{
 }
 ```
 
-### 繼承與覆寫
+### mixin
 
-* 使用 % 來宣告類別，並使用 @extend 來執行繼承。如果要覆寫屬性，則直接宣告即可。
+在物件導向程式設計中，mixin 意指一種工具形式的類別，用以附加在目標類別之上，為目標類別增添額外的方法或屬性——你可以將它視作一種更彈性的繼承 (inherit) 的實作方式。
+
+在 Sass 裡，我們使用 @mixin 進行宣告，並使用 @include 使用 mixin，提高了程式碼的重用性 (reusability) 以及可讀性 (readability) 。
 
 #### SCSS
 ```scss
-%message{
-  border: 1px solid black;
-  padding: 10px;
-  color: black;
+@mixin font-setting($size, $weight, $color){
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
 }
-.message-success{
-  @extend %message;
-  color: green;
+article{
+  @include font-setting(1.0em, normal, black);
 }
-.message-info{
-  @extend %message;
-  color: yellow;
-}
-.message-error{
-  @extend %message;
-  color: red;
+footer {
+  @include font-setting(0.8em, bolder, gray);
 }
 ```
 
 #### 編譯後的 CSS
 ```css
-.message-error,
-.message-info,
-.message-success {
-  border:1px solid #000;
-  padding:10px;
+article{
+  font-size:1em;
+  font-weight:normal;
   color:#000
 }
-.message-success{
-  color:green
-}
-.message-info{
-  color:#ff0
-}
-.message-error{
-  color:red
+footer{
+  font-size:.8em;
+  font-weight:bolder;
+  color:gray
 }
 ```
