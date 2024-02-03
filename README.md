@@ -68,3 +68,71 @@ module.exports = {
 ```bash
 npm run build
 ```
+## SCSS
+
+### 巢狀結構
+#### SCSS
+```scss
+article{
+  h1{
+    font-size: 1.2em;
+  }
+  h2{
+    font-size: 1.0em;
+  }
+  +div{
+    margin: 20px;
+  }
+}
+```
+
+#### 編譯後的 CSS
+```css
+article h1{
+  font-size:1.2em
+}
+article h2{
+  font-size:1em
+}
+article+div{
+  margin:20px
+}
+```
+
+### 檔案模組化
+
+* 開頭為底線 _ 的檔名在 Sass 中稱之為 partial，也就是一個低階的模組。
+* 我們使用 @use 來引用 partial。請注意引用名稱不包含底線，也不包含副檔名。
+* 模組有自己的命名空間 (namespace) ，使用模組中的變數時，必須給命名空間加上前綴，例如 base.$primary-color 。
+
+#### SCSS
+```scss
+// _base.scss
+$font_stack: Helvetica, sans-serif;
+$primary_color: #333;
+
+body{
+  font: 100% $font_stack;
+  color: $primary_color;
+}
+
+// styles.scss
+@use 'base';
+
+.inverse{
+  background-color: base.$primary_color;
+  color: white;
+}
+```
+
+#### 編譯後的 CSS
+```css
+body{
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+.inverse{
+  background-color:#333;
+  color:#fff
+}
+```
