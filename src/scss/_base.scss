@@ -13,5 +13,5 @@ body{
 
 .comment{
   font: 100% $font_stack;
-  font-size: 8 / 10 * $font_size;
+  font-size: calc(8 / 10) * $font_size;
 }

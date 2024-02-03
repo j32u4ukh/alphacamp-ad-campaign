@@ -84,6 +84,13 @@ article{
     margin: 20px;
   }
 }
+
+// & 可與父層名稱拼接，避免重複的名稱一直寫
+.article{
+  &__title{
+    color: blue;
+  }
+}
 ```
 
 #### 編譯後的 CSS
@@ -96,6 +103,9 @@ article h2{
 }
 article+div{
   margin:20px
+}
+.article__title{
+  color:blue
 }
 ```
 

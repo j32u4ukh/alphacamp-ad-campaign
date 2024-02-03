@@ -27,6 +27,12 @@ article{
   }
 }
 
+.article{
+  &__title{
+    color: blue;
+  }
+}
+
 footer {
   @include font-setting(0.8em, bolder, gray);
 }
