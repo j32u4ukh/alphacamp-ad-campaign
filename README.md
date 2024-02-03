@@ -136,3 +136,48 @@ body{
   color:#fff
 }
 ```
+
+### 繼承與覆寫
+
+* 使用 % 來宣告類別，並使用 @extend 來執行繼承。如果要覆寫屬性，則直接宣告即可。
+
+#### SCSS
+```scss
+%message{
+  border: 1px solid black;
+  padding: 10px;
+  color: black;
+}
+.message-success{
+  @extend %message;
+  color: green;
+}
+.message-info{
+  @extend %message;
+  color: yellow;
+}
+.message-error{
+  @extend %message;
+  color: red;
+}
+```
+
+#### 編譯後的 CSS
+```css
+.message-error,
+.message-info,
+.message-success {
+  border:1px solid #000;
+  padding:10px;
+  color:#000
+}
+.message-success{
+  color:green
+}
+.message-info{
+  color:#ff0
+}
+.message-error{
+  color:red
+}
+```
