@@ -1,19 +1,11 @@
+@use 'reset';
 @use 'base';
-
-%message{
-  border: 1px solid black;
-  padding: 10px;
-  color: black;
-}
-
-@mixin font-setting($size, $weight, $color){
-  font-size: $size;
-  font-weight: $weight;
-  color: $color;
-}
+@use 'main';
+@use 'left';
+@use 'right';
 
 article{
-  @include font-setting(1.0em, normal, black);
+  @include base.font-setting(1.0em, normal, black);
   h1{
     font-size: 1.2em;
   }
@@ -34,25 +26,10 @@ article{
 }
 
 footer {
-  @include font-setting(0.8em, bolder, gray);
+  @include base.font-setting(0.8em, bolder, gray);
 }
 
 .inverse{
   background-color: base.$primary_color;
   color: white;
-}
-
-.message-success{
-  @extend %message;
-  color: green;
-}
-
-.message-info{
-  @extend %message;
-  color: yellow;
-}
-
-.message-error{
-  @extend %message;
-  color: red;
 }

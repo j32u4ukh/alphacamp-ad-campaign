@@ -1,8 +1,129 @@
+:root {
+  --table-title: #ddd;
+  --table-row: #eee;
+  --white: #fff;
+  --main-blue: #003565;
+  --main-green: rgb(145, 240, 145);
+  --light-gray: #a7aaaf;
+}
+
+$title_height: 20;
 $bg_color: #b3d9ff;
 $font_color: black;
 $font_stack: Helvetica, sans-serif;
 $font_size: 18px;
 $primary_color: #333;
+
+%box1{
+  outline: 1px solid tomato;
+}
+
+%box2{
+  outline: 1px solid dodgerblue;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-end {
+  align-content: flex-end;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.scrollbar{
+  padding-left: 6px;
+  // 整體的樣式
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  // bar的樣式
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin font-setting($size, $weight, $color){
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
 
 body{
   background-color:$bg_color;

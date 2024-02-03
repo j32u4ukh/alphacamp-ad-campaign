@@ -1,0 +1,40 @@
+@use 'base';
+
+.right{
+  @extend %box2;
+  flex: 1;
+  display: flex;
+  background-color: var(--main-green);
+  flex-direction: column;
+}
+
+.title{
+  height: base.$title_height * 1%;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.table-container{
+  height: (100 - base.$title_height) * 1%;
+}
+
+.table{
+  @extend %box1;
+  width: 80%;
+  margin: 0 auto;
+
+  &__th{
+    @extend %box2;
+    text-align: center;
+  }
+
+  &__td{
+    @extend %box1;
+    text-align: center;
+  }
+}
+
+.subline{
+  color: gray;
+}
