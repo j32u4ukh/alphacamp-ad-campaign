@@ -4,58 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>廣告排期系統</title>
   <!-- 檔案一開始不存在，編譯後才會出現 -->
   <link rel="stylesheet" href="dst/styles.css">
 </head>
 
 <body>
   <main>
-    <div class="left">
-      <p>Left</p>
-    </div>
+    <header class="left">
+      <nav>
+        <div class="container-logo">
+          <a class="home-link" href="#">
+            <div class="logo-img"></div>
+          </a>
+        </div>
+        <div class="container-icon">
+          <div class="icon active">
+            <a class="frame-link active" href="#" data-id="1">
+              <img
+                src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/frame.svg"
+                alt="frame-icon">
+            </a>
+          </div>
+          <div class="icon">
+            <a class="mail-link" href="#" data-id="2">
+              <img
+                src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/mail.svg"
+                alt="mail icon">
+            </a>
+          </div>
+          <div class="icon">
+            <a class="folder-link" href="#" data-id="3">
+              <img
+                src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/folder.svg"
+                alt="folder icon">
+            </a>
+          </div>
+          <div class="icon-dark-mode">
+            <label for="dark-mode-toggle">
+              <div class="dark-mode-img"></div>
+            </label>
+            <input type="checkbox" class="dark-mode-toggle d-none" id="dark-mode-toggle">
+          </div>
+
+        </div>
+      </nav>
+    </header>
     <div class="right">
       <div class="title">Campaign</div>
       <div class="table-container">
         <table class="table">
           <thead>
-            <th class="table__th">
-              <input type="checkbox">
-            </th>
-            <th class="table__th">
-              ID
-            </th>
-            <th class="table__th">
-              Name
-            </th>
-            <th class="table__th">
-              <p>Advertiser</p>
-              <p class="subline">Group</p>
-            </th>
-            <th class="table__th">
-              Description
-            </th>
-            <th class="table__th">
-              Price
-              <img
-                src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg">
-            </th>
-            <th class="table__th">
-              Start Time
-              <img
-                src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg">
-            </th>
-            <th class="table__th">
-              End Time
-              <img
-                src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg">
-            </th>
-            <th class="table__th">
-              Actions
-            </th>
+            <tr>
+              <th class="table__th">
+                <input type="checkbox">
+              </th>
+              <th class="table__th">
+                ID
+              </th>
+              <th class="table__th">
+                Name
+              </th>
+              <th class="table__th">
+                Advertiser
+                <p class="subline">Group</p>
+              </th>
+              <th class="table__th">
+                Description
+              </th>
+              <th class="table__th">
+                Price
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg">
+              </th>
+              <th class="table__th">
+                Start Time
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg">
+              </th>
+              <th class="table__th">
+                End Time
+                <img
+                  src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/sort.svg">
+              </th>
+              <th class="table__th">
+                Actions
+              </th>
+            </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="table__row">
               <td class="table__td">
                 <input type="checkbox">
               </td>
@@ -86,7 +124,7 @@
                   src="https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg">
               </td>
             </tr>
-            <tr>
+            <tr class="table__row">
               <td class="table__td">
                 <input type="checkbox">
               </td>

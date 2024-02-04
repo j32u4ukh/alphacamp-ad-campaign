@@ -4,7 +4,6 @@
   @extend %box2;
   flex: 1;
   display: flex;
-  background-color: var(--main-green);
   flex-direction: column;
 }
 
@@ -13,25 +12,42 @@
   display: flex;
   align-items: center;
   font-size: 3rem;
+  padding-left: 50px;
 }
 
 .table-container{
   height: (100 - base.$title_height) * 1%;
 }
 
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
 .table{
-  @extend %box1;
+  @extend %box;
   width: 80%;
   margin: 0 auto;
 
   &__th{
-    @extend %box2;
+    @extend %box;
     text-align: center;
+    background-color: var(--table-row);
   }
 
   &__td{
-    @extend %box1;
+    @extend %box;
     text-align: center;
+  }
+
+  &__row:nth-child(even) {
+    background: var(--zebra-color);
   }
 }
 

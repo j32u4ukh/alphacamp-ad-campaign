@@ -1,8 +1,15 @@
 @use 'base';
 
 .left{
-  @extend %box1;
   height: 100%;
   flex: 0 0 100px;
   background-color: var(--main-blue);
+}
+
+.logo-img {
+  background-image: var(--logo-img);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 30px;
 }
