@@ -80,6 +80,7 @@ article{
   h2{
     font-size: 1.0em;
   }
+  // 組合子(`+`) 是一個相鄰兄弟組合子(adjacent sibling combinator), 選擇所有在相同父元素下，且在指定元素之後的同級元素。在這個情境中，它選擇了所有在 <article> 元素後面的直接相鄰的 <div> 元素。
   +div{
     margin: 20px;
   }

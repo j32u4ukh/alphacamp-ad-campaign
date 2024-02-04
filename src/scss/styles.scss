@@ -3,33 +3,3 @@
 @use 'main';
 @use 'left';
 @use 'right';
-
-article{
-  @include base.font-setting(1.0em, normal, black);
-  h1{
-    font-size: 1.2em;
-  }
-  h2{
-    font-size: 1.0em;
-  }
-
-  // 組合子(`+`) 是一個相鄰兄弟組合子(adjacent sibling combinator), 選擇所有在相同父元素下，且在指定元素之後的同級元素。在這個情境中，它選擇了所有在 <article> 元素後面的直接相鄰的 <div> 元素。
-  +div{
-    margin: 20px;
-  }
-}
-
-.article{
-  &__title{
-    color: blue;
-  }
-}
-
-footer {
-  @include base.font-setting(0.8em, bolder, gray);
-}
-
-.inverse{
-  background-color: base.$primary_color;
-  color: white;
-}

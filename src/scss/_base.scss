@@ -1,3 +1,5 @@
+$title_height: 20;
+
 :root {
   --table-title: #ddd;
   --table-row: #eee;
@@ -8,13 +10,6 @@
   --zebra-color: #e9e9e9;
   --logo-img: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/logo.svg");
 }
-
-$title_height: 20;
-$bg_color: #b3d9ff;
-$font_color: black;
-$font_stack: Helvetica, sans-serif;
-$font_size: 18px;
-$primary_color: #333;
 
 %box{
   border: 1px solid black;
@@ -123,22 +118,4 @@ $primary_color: #333;
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.1);
   }
-}
-
-@mixin font-setting($size, $weight, $color){
-  font-size: $size;
-  font-weight: $weight;
-  color: $color;
-}
-
-body{
-  background-color:$bg_color;
-  h1 {
-    color: $font_color
-  }
-}
-
-.comment{
-  font: 100% $font_stack;
-  font-size: calc(8 / 10) * $font_size;
 }
