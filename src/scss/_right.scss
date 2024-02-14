@@ -44,6 +44,11 @@ th {
   &__td{
     @extend %box;
     text-align: center;
+
+    &--action{
+      width: 210px;
+      position: relative;
+    }
   }
 
   &__row:nth-child(even) {
@@ -52,5 +57,24 @@ th {
 }
 
 .subline{
-  color: gray;
+  color: rgb(75, 75, 75);
+}
+
+.cell__action__icon {
+  cursor: pointer;
+}
+
+.action__menu {
+  z-index: 1;
+  position: absolute;
+  right: 50%;
+  top: 100%;
+  width: 140px;
+  height: 120px;
+  background: var(--background-white);
+  border: 1px solid var(--border-color);
+}
+
+.hidden {
+  display: none;
 }

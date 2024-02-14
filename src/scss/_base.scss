@@ -2,13 +2,18 @@ $title_height: 20;
 
 :root {
   --table-title: #ddd;
-  --table-row: #eee;
+  --table-row: #959595;
   --white: #fff;
   --main-blue: #003565;
   --main-green: rgb(145, 240, 145);
   --light-gray: #a7aaaf;
   --zebra-color: #e9e9e9;
   --logo-img: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/logo.svg");
+  --drakmode-img: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-off.svg");
+
+  --action-text-color: black;
+  --menu-icon-url: url('https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/menu.svg');
+  --duplicate-icon-img: url();
 }
 
 %box{
